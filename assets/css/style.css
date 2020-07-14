@@ -531,7 +531,6 @@ ul{
   List-style-type: none;
   margin: 0px;
   padding: 0px;
-  background: #800080;
   overflow: hidden;
   }
 
@@ -548,8 +547,8 @@ li a{
     }
 
 li a: hover{ 
-	background-color: #B0C4DE;
-	color: #0000FF;
+	background-color: #800080;
+	color: #800080;
            }
 
 
