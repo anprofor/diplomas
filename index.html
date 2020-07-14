@@ -1,40 +1,30 @@
-<html>
-<body>
+<?
+$ficherolibro = file("contrasenas.txt");
+$largo = sizeof($ficherolibro);
+$largo = $largo - 1;
 
-<form action="../../form-result.php" method="post" target="_blank">
+for($i=$largo ; $i>-1 ; $i--) {
 
-  
-  if ( ! Modernizr.adownload ) {
-  var $link = $('a');
- 
-    $link.each(function() {
-        var $download = $(this).attr('download');
-     
-        if (typeof $download !== typeof undefined && $download !== false) {
-      var $el = $('<div>').addClass('download-instruction').text('Right-click and select "Download Linked File"');
-      $el.insertAfter($(this));
-        }
- 
-    });
+$libro = explode("|", $ficherolibro[$i]);
+
+if($pass=="libro[0]"){ //notese q he puesto libro[0] porque se.. 
+// tratara de la 1er contraseña (contraseña1)
+
+// aki puedes poner un redirect al file
+
+?>
+<SCRIPT LANGUAGE="javascript"> 
+location.href = "1.pdf"; 
+</SCRIPT> 
+<?
 }
-  
-  
-  
-  <p>
-
-    Dirección de correo electrónico: <input type="email" name="direccionemail" placeholder="Ej.: usuario@servidor.com">
-
-    <a href="1.pdf" download="Diploma ANPROFOR"> Descargar Archivo</a>
-
-    <input type="submit" value="Descargar Diploma">
-
-  </p>
-
-</form>
+} else {
+echo "No tienes acceso al file, necesitas la contraseña...";
+}
+?>
   
   
   
 
 
-</body>
-</html>
+
