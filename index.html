@@ -45,9 +45,31 @@
       </div>      
       <nav id="nav-menu-container">
         
-       
+         <!--================Hero Banner Area Start =================-->
+  <section class="hero-banner hero-banner-sm" style="padding-top: 50px;">
+    <div class="container text-center justify-content-center text-white">
+      <h2>ANPROFOR ONLINE 2020</h2>
+      <h4 style="color:white;">Obtener diploma de participación</h4>
+      <p style="color:white">Para obtener su diploma ingrese su correo electrónico con el cual confirmaron su participación, si los datos son válidos aparecerá un boton verde para poder descargar su diploma.</p>
+      <form style="color:white; margin: auto;" class="justify-content-center text-white col-md-6 col-sm-12">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Correo electrónico</label>
+          <input ng-model="user_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico">
+          <small id="emailHelp" class="form-text text-muted text-white" style="color:white">Usa el mismo correo con el que te registraste para el evento.</small>
+        </div>
+        <button class="btn btn-primary" ng-click="buscarDiploma()">Buscar Diploma</button>
+      </form>
+      <br>
+      <pre ng-show="has_hash" style="color:white">
+HASH: {{hash}}
+Nombre: {{hash_data.name}}
+Temas:
+{{hash_data.temas}}
+      </pre>
+      <a ng-show="has_diploma" class="btn btn-danger" href="{{diploma_url}}" download="diploma-ANPROFOR_2020.pdf">Descargar Diploma</a>
+    </div>
+  </section>
             
-               <li class="buy-tickets"><a href="https://forms.gle/dXaWQYFbb4FmwRFKA">Ingrese su correo electrónico aquí</a></li>
 
      
   </header><!-- End #header -->
