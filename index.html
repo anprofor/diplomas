@@ -57,7 +57,7 @@
           <input ng-model="user_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico">
           <small id="emailHelp" class="form-text text-muted text-white" style="color:white">Usa el mismo correo con el que te registraste para el evento.</small>
         </div>
-        <button class="btn btn-primary" ng-click="buscarDiploma()">Buscar Diploma</button>
+        <button class="btn btn-primary" ng-click="buscarDiploma()">descargar</button>
       </form>
       <br>
       <pre ng-show="has_hash" style="color:white">
@@ -66,7 +66,7 @@ Nombre: {{hash_data.name}}
 Temas:
 {{hash_data.temas}}
       </pre>
-      <a ng-show="has_diploma" class="btn btn-danger" href="{{diploma_url}}" download="diploma-ANPROFOR_2020.pdf">Descargar Diploma</a>
+      <a ng-show="has_diploma" class="btn btn-danger" href="{{3.pdf}}">Descargar Diploma</a>
     </div>
   </section>
             
